@@ -11,6 +11,7 @@ balance = 0;
 Account(int accnumber,double balance)
 {
 this.accnumber = accnumber;
+if(balance > 0)
 this.balance = balance;
 }
 }
@@ -135,7 +136,6 @@ public static void main(String arg[])
 Scanner sc = new Scanner(System.in);
 Customer c[] = new Customer[5];
 int type,type1,type2;
-try{
 do
 {
 System.out.println("Create New Account -- 1");
@@ -176,10 +176,7 @@ default :
 System.out.println("Invalid Option");
 }
 }while(type != 3);
-}catch(Exception e)
-{
-System.out.println(e);
-}
+
 }
 }
 
